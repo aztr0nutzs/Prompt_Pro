@@ -1,0 +1,3 @@
+# Architecture
+
+Core system design.
