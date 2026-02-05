@@ -1,0 +1,228 @@
+/* PROMPT-FORGE UI overrides layered on top of rsi_theme.css.
+   rsi_theme.css remains verbatim to satisfy "use attached styles exactly". */
+
+:root{
+  --mint: #19f7c1;
+  --neon-purple: #b026ff;
+  --neon-purple-2: #ff2bd6;
+  --panel-bg: rgba(0, 0, 0, .55);
+  --panel-border: rgba(10, 86, 136, .9);
+}
+
+body{
+  padding: 2.2rem;
+}
+
+/* App shell */
+.pf-shell{
+  display:flex;
+  gap: 2rem;
+  align-items: stretch;
+}
+
+.pf-sidebar{
+  width: 300px;
+  min-width: 260px;
+  background: var(--panel-bg);
+  border: .2rem solid var(--line-color);
+  box-shadow: 0 0 25px rgba(0, 116, 194, .18);
+  padding: 2rem;
+  position: sticky;
+  top: 2rem;
+  height: calc(100vh - 4.4rem);
+  overflow: auto;
+}
+
+.pf-brand{
+  display:flex;
+  flex-direction: column;
+  gap: .7rem;
+  margin-bottom: 1.2rem;
+}
+.pf-brand h1{
+  margin: 0;
+  font-size: 2.0rem;
+}
+.pf-brand .sub{
+  margin: 0;
+}
+
+.pf-nav{
+  margin: 1rem 0 1.5rem;
+  padding: 0;
+}
+.pf-nav li{
+  display:block;
+  padding: 0;
+  margin: .3rem 0;
+}
+.pf-nav li:after{ display:none; }
+.pf-nav a{
+  display:block;
+  padding: 1rem 1.2rem;
+  border-left: .25rem solid var(--line-color);
+  background: rgba(22, 104, 159, 0.12);
+}
+.pf-nav a:hover{
+  border-left-color: var(--primary-color);
+  background: rgba(0, 23, 43, 0.65);
+}
+
+.pf-search{
+  width: 100%;
+  margin: 1rem 0 1.2rem;
+  display:flex;
+  gap:.8rem;
+}
+.pf-search input{
+  width:100%;
+  padding: 1rem 1.2rem;
+  background: rgba(10, 24, 34, 0.55);
+  border: .1rem solid var(--line-color);
+  color: var(--white-color);
+  outline: none;
+  font-family: 'Jura', sans-serif;
+}
+.pf-search input:focus{
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 2px rgba(0, 235, 255, .12);
+}
+
+.pf-filters{
+  display:flex;
+  flex-wrap: wrap;
+  gap: .6rem;
+  margin: .8rem 0 0;
+}
+.pf-chip{
+  cursor:pointer;
+  user-select:none;
+  padding: .65rem 1rem;
+  border: .1rem solid var(--line-color);
+  background: rgba(22, 104, 159, 0.10);
+  color: var(--body-color);
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: .08rem;
+}
+.pf-chip[aria-pressed="true"]{
+  border-color: var(--primary-color);
+  color: var(--white-color);
+  box-shadow: 0 0 12px rgba(0, 235, 255, .20);
+}
+
+.pf-main{
+  flex:1;
+  background: var(--panel-bg);
+  border: .2rem solid var(--line-color);
+  padding: 2rem;
+  min-height: calc(100vh - 4.4rem);
+}
+
+.pf-topbar{
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+
+.pf-breadcrumb{
+  font-size: 1.2rem;
+  letter-spacing: .08rem;
+  text-transform: uppercase;
+  opacity:.9;
+  overflow:hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.pf-actions{
+  display:flex;
+  gap: .6rem;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+.pf-actions .btn{ margin:0; }
+.pf-actions .btn.pf-mint{ border-left-color: var(--mint); color: var(--mint); }
+.pf-actions .btn.pf-purple{ border-left-color: var(--neon-purple); color: var(--neon-purple); }
+.pf-actions .btn.pf-purple2{ border-left-color: var(--neon-purple-2); color: var(--neon-purple-2); }
+
+/* Library cards */
+.pf-list{
+  list-style:none;
+  padding:0;
+  margin:0;
+  display:flex;
+  flex-wrap: wrap;
+  gap: 1.2rem;
+}
+.pf-card{
+  width: calc(50% - .6rem);
+  min-width: 320px;
+  background: rgba(22, 104, 159, 0.10);
+  border: .1rem solid rgba(22, 104, 159, 0.25);
+  border-left: .35rem solid var(--primary-color);
+  padding: 1.6rem;
+  position: relative;
+}
+.pf-card:hover{
+  background: rgba(0, 23, 43, 0.65);
+}
+.pf-card h4{
+  margin: 0 0 .8rem;
+  font-size: 1.6rem;
+}
+.pf-meta{
+  display:flex;
+  gap: .8rem;
+  flex-wrap: wrap;
+  margin: .8rem 0 1.1rem;
+  font-size: 1.1rem;
+  letter-spacing: .08rem;
+  text-transform: uppercase;
+  opacity:.9;
+}
+.pf-badge{
+  padding: .35rem .7rem;
+  border: .1rem solid var(--line-color);
+  background: rgba(10, 24, 34, 0.35);
+}
+/* Color-code by category */
+.pf-card[data-cat="SYSTEM_PROMPTS"]{ border-left-color: var(--mint); }
+.pf-card[data-cat="CRITICAL_REVIEW"]{ border-left-color: var(--neon-purple); }
+.pf-card[data-cat="DEBUGGING"]{ border-left-color: var(--neon-purple-2); }
+
+.pf-card .btn{ margin:0; }
+.pf-card .btn span{ letter-spacing: .08rem; }
+
+/* Editor */
+.pf-editor{
+  width:100%;
+  min-height: 58vh;
+  resize: vertical;
+  padding: 1.2rem;
+  background: rgba(10, 24, 34, 0.55);
+  border: .1rem solid var(--line-color);
+  color: var(--white-color);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-size: 13px;
+  line-height: 1.45;
+}
+.pf-editor:focus{
+  outline:none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 2px rgba(0, 235, 255, .12);
+}
+
+/* Views */
+.pf-view{ display:none; }
+.pf-view.active{ display:block; }
+
+/* Small screens */
+@media (max-width: 980px){
+  body{ padding: 1.2rem; }
+  .pf-shell{ flex-direction: column; }
+  .pf-sidebar{ position: relative; top:0; height:auto; width: auto; }
+  .pf-card{ width: 100%; min-width: 0; }
+}

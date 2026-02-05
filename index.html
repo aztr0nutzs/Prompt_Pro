@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>PROMPT-FORGE</title>
+  <link rel="stylesheet" href="css/rsi_theme.css"/>
+  <link rel="stylesheet" href="css/styles.css"/>
+</head>
+<body>
+  <div class="container">
+    <div class="pf-shell">
+      <aside class="pf-sidebar">
+        <div class="pf-brand">
+          <h1>PROMPT-FORGE</h1>
+          <p class="sub">Prompt library console</p>
+        </div>
+
+        <ul class="pf-nav" id="navTabs">
+          <li><a class="radio" href="#" data-view="library">Library</a></li>
+          <li><a class="radio" href="#" data-view="editor">Editor</a></li>
+          <li><a class="radio" href="#" data-view="favorites">Favorites</a></li>
+          <li><a class="radio" href="#" data-view="about">About</a></li>
+        </ul>
+
+        <div class="widjet">
+          <div class="widget-title">SEARCH + FILTER</div>
+          <div class="pf-search">
+            <input id="searchInput" type="search" placeholder="Search prompts (name, category, path)..." />
+          </div>
+          <div class="pf-filters" id="filterChips">
+            <span class="pf-chip" data-filter="SYSTEM_PROMPTS" aria-pressed="true">SYSTEM</span>
+            <span class="pf-chip" data-filter="CRITICAL_REVIEW" aria-pressed="true">REVIEW</span>
+            <span class="pf-chip" data-filter="DEBUGGING" aria-pressed="true">DEBUG</span>
+          </div>
+        </div>
+
+        <div class="widjet" style="margin-top:1.2rem">
+          <div class="widget-title">COLOR KEY</div>
+          <ul>
+            <li><span class="pf-badge" style="border-color: var(--mint); color: var(--mint);">MINT</span> System prompts</li>
+            <li><span class="pf-badge" style="border-color: var(--neon-purple); color: var(--neon-purple);">NEON PURPLE</span> Critical review</li>
+            <li><span class="pf-badge" style="border-color: var(--neon-purple-2); color: var(--neon-purple-2);">NEON PINK</span> Debugging</li>
+          </ul>
+        </div>
+      </aside>
+
+      <main class="pf-main">
+        <div class="pf-topbar">
+          <div class="pf-breadcrumb" id="currentPath">/</div>
+          <div class="pf-actions">
+            <a class="btn pf-mint" href="#" id="btnRun"><span>RUN</span></a>
+            <a class="btn pf-purple" href="#" id="btnSave"><span>SAVE</span></a>
+            <a class="btn pf-purple2" href="#" id="btnExport"><span>EXPORT</span></a>
+          </div>
+        </div>
+
+        <section id="view-library" class="pf-view active">
+          <ul class="pf-list" id="libraryList"></ul>
+        </section>
+
+        <section id="view-editor" class="pf-view">
+          <h3 id="editorTitle">EDITOR</h3>
+          <textarea id="editor" class="pf-editor" spellcheck="false"></textarea>
+        </section>
+
+        <section id="view-favorites" class="pf-view">
+          <h3>FAVORITES</h3>
+          <p>Favorites are stored locally in your browser. (Coming next.)</p>
+        </section>
+
+        <section id="view-about" class="pf-view">
+          <h3>ABOUT</h3>
+          <p>PROMPT-FORGE is an offline-first prompt library console designed for editing, remixing, and exporting elite prompts.</p>
+        </section>
+      </main>
+    </div>
+  </div>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
