@@ -1,0 +1,92 @@
+[
+  {
+    "path": "/SYSTEM_PROMPTS/absolute_role_lock",
+    "file": "../../prompts/SYSTEM_PROMPTS/absolute_role_lock.md",
+    "cat": "SYSTEM_PROMPTS",
+    "name": "absolute role lock"
+  },
+  {
+    "path": "/SYSTEM_PROMPTS/alignment_guardrails",
+    "file": "../../prompts/SYSTEM_PROMPTS/alignment_guardrails.md",
+    "cat": "SYSTEM_PROMPTS",
+    "name": "alignment guardrails"
+  },
+  {
+    "path": "/SYSTEM_PROMPTS/context_boundary_enforcer",
+    "file": "../../prompts/SYSTEM_PROMPTS/context_boundary_enforcer.md",
+    "cat": "SYSTEM_PROMPTS",
+    "name": "context boundary enforcer"
+  },
+  {
+    "path": "/SYSTEM_PROMPTS/privacy_redaction_protocol",
+    "file": "../../prompts/SYSTEM_PROMPTS/privacy_redaction_protocol.md",
+    "cat": "SYSTEM_PROMPTS",
+    "name": "privacy redaction protocol"
+  },
+  {
+    "path": "/SYSTEM_PROMPTS/toolchain_execution_brief",
+    "file": "../../prompts/SYSTEM_PROMPTS/toolchain_execution_brief.md",
+    "cat": "SYSTEM_PROMPTS",
+    "name": "toolchain execution brief"
+  },
+  {
+    "path": "/CRITICAL_REVIEW/hostile_logic_breaker",
+    "file": "../../prompts/CRITICAL_REVIEW/hostile_logic_breaker.md",
+    "cat": "CRITICAL_REVIEW",
+    "name": "hostile logic breaker"
+  },
+  {
+    "path": "/CRITICAL_REVIEW/assumption_stress_test",
+    "file": "../../prompts/CRITICAL_REVIEW/assumption_stress_test.md",
+    "cat": "CRITICAL_REVIEW",
+    "name": "assumption stress test"
+  },
+  {
+    "path": "/CRITICAL_REVIEW/evidence_gap_audit",
+    "file": "../../prompts/CRITICAL_REVIEW/evidence_gap_audit.md",
+    "cat": "CRITICAL_REVIEW",
+    "name": "evidence gap audit"
+  },
+  {
+    "path": "/CRITICAL_REVIEW/counterexample_hunter",
+    "file": "../../prompts/CRITICAL_REVIEW/counterexample_hunter.md",
+    "cat": "CRITICAL_REVIEW",
+    "name": "counterexample hunter"
+  },
+  {
+    "path": "/CRITICAL_REVIEW/rubric_adherence_review",
+    "file": "../../prompts/CRITICAL_REVIEW/rubric_adherence_review.md",
+    "cat": "CRITICAL_REVIEW",
+    "name": "rubric adherence review"
+  },
+  {
+    "path": "/DEBUGGING/root_cause_isolation",
+    "file": "../../prompts/DEBUGGING/root_cause_isolation.md",
+    "cat": "DEBUGGING",
+    "name": "root cause isolation"
+  },
+  {
+    "path": "/DEBUGGING/reproduction_matrix_builder",
+    "file": "../../prompts/DEBUGGING/reproduction_matrix_builder.md",
+    "cat": "DEBUGGING",
+    "name": "reproduction matrix builder"
+  },
+  {
+    "path": "/DEBUGGING/telemetry_signal_triage",
+    "file": "../../prompts/DEBUGGING/telemetry_signal_triage.md",
+    "cat": "DEBUGGING",
+    "name": "telemetry signal triage"
+  },
+  {
+    "path": "/DEBUGGING/regression_diff_inspector",
+    "file": "../../prompts/DEBUGGING/regression_diff_inspector.md",
+    "cat": "DEBUGGING",
+    "name": "regression diff inspector"
+  },
+  {
+    "path": "/DEBUGGING/incident_timeline_synth",
+    "file": "../../prompts/DEBUGGING/incident_timeline_synth.md",
+    "cat": "DEBUGGING",
+    "name": "incident timeline synth"
+  }
+]
