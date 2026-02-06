@@ -1,4 +1,4 @@
-# PROMPT-FORGE
+# PROMPT PRO
 
 Offline-first prompt library application.
 
